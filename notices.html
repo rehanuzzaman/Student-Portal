@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Notices</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/notices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payments.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li class="active"><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/avatar.png" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-bullhorn"></i> Notices</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">Loading...</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="notices-content">
+                <div class="notices-filter">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Notices</option>
+                            <option value="important">Important</option>
+                            <option value="general">General</option>
+                            <option value="transport">Transport</option>
+                            <option value="exam">Exam</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Date:</label>
+                        <select id="date-filter" class="filter-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="last-month">Last Month</option>
+                        </select>
+                    </div>
+                    <button id="refresh-notices" class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+
+                <div class="notice-list" id="notice-list">
+                    <!-- Notices will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/notices.js"></script>
+</body>
+</html>

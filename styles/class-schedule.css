@@ -1,0 +1,219 @@
+/* Schedule Specific Styles */
+.schedule-content {
+    padding: 20px;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.view-toggle button.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.view-toggle button:not(.active) {
+    background-color: var(--border);
+    color: var(--text);
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.course-table th,
+.course-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+
+.course-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+}
+
+.course-table tr:nth-child(even) {
+    background-color: var(--primary-extra-light);
+}
+
+.course-table tr:hover {
+    background-color: var(--primary-light-accent);
+}
+
+.btn-drop {
+    padding: 6px 12px;
+    background-color: var(--error);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-drop:hover {
+    background-color: #b91c1c;
+}
+
+/* Calendar View Styles */
+.schedule-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.schedule-filter {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--white);
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.schedule-table-container {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    min-width: 120px;
+}
+
+.schedule-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+}
+
+.class-slot {
+    font-weight: 500;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: var(--primary-extra-light);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.class-course {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.class-info {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.class-room {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: var(--primary-light);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+@media (max-width: 992px) {
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .class-slot {
+        padding: 6px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-controls {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .course-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .view-toggle {
+        flex-direction: column;
+    }
+    
+    .view-toggle button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .schedule-table th,
+    .schedule-table td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .class-slot {
+        padding: 4px;
+        font-size: 12px;
+    }
+    
+    .class-info {
+        font-size: 11px;
+    }
+}

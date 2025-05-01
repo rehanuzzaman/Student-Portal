@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Profile</title>
+    <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Blue Themed Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="active"><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payments.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/avatar.png" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-user"></i> Student Profile</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">May 15, 2025</span>
+                    </div>
+                    <button id="editProfileBtn" class="edit-btn">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                </div>
+            </header>
+
+            <div class="profile-content">
+                <!-- Profile Overview -->
+                <section class="profile-section">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="./assets/avatar.png" alt="Student Avatar" id="profileImage">
+                            <button class="upload-btn" id="uploadImageBtn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h3>REHANUZ ZAMAN</h3>
+                            <p class="student-id">ID: 222-35-1091</p>
+                            <p class="department">
+                                <i class="fas fa-graduation-cap"></i> 
+                                B.Sc. in Software Engineering
+                            </p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">3.78</span>
+                                    <span class="stat-label">CGPA</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">94%</span>
+                                    <span class="stat-label">Attendance</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">125</span>
+                                    <span class="stat-label">Credits</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Personal Information -->
+                <section class="info-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-info-circle"></i> Personal Information</h3>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p id="fullName">REHANUZ ZAMAN</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <p id="dob">August 20, 2002</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Gender</label>
+                            <p id="gender">Male</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Blood Group</label>
+                            <p id="bloodGroup">B+</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Nationality</label>
+                            <p id="nationality">Bangladeshi</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Religion</label>
+                            <p id="religion">Islam</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Information -->
+                <section class="info-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-address-book"></i> Contact Information</h3>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p id="email">zaman35-1091@diu.edu.bd</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <p id="phone">+880 1762738886</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Emergency Contact</label>
+                            <p id="emergencyContact">+880 1762738886 (Father)</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Present Address</label>
+                            <p id="presentAddress">Uttara, Dhaka - 1230</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Permanent Address</label>
+                            <p id="permanentAddress">Uttara, Dhaka - 1230</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Academic Information -->
+                <section class="info-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Department</label>
+                            <p id="department">Software Engineering</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Program</label>
+                            <p id="program">B.Sc. in SWE</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Batch</label>
+                            <p id="batch">38</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Student Type</label>
+                            <p id="studentType">Regular</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Admission Date</label>
+                            <p id="admissionDate">March, 2022</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Expected Graduation</label>
+                            <p id="graduationDate">April 2026</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Edit Profile Modal -->
+                <div class="modal" id="editProfileModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Edit Profile</h3>
+                            <button class="close-btn" id="closeModalBtn">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="profileForm">
+                                <div class="form-group">
+                                    <label for="editFullName">Full Name</label>
+                                    <input type="text" id="editFullName" value="John Michael Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPhone">Phone Number</label>
+                                    <input type="text" id="editPhone" value="+880 1712 345678">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editEmail">Email</label>
+                                    <input type="email" id="editEmail" value="john.doe@student.diu.edu.bd">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPresentAddress">Present Address</label>
+                                    <textarea id="editPresentAddress">123/A, Dhanmondi, Dhaka-1209</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPermanentAddress">Permanent Address</label>
+                                    <textarea id="editPermanentAddress">456/B, Mirpur, Dhaka-1216</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editEmergencyContact">Emergency Contact</label>
+                                    <input type="text" id="editEmergencyContact" value="+880 1812 345678 (Father)">
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="cancel-btn" id="cancelEditBtn">Cancel</button>
+                                    <button type="submit" class="save-btn">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/profile.js"></script>
+</body>
+</html>
