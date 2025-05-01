@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Exam Clearance</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/exam-clearance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payments.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li class="active"><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/avatar.png" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-graduation-cap"></i> Exam Clearance</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">Loading...</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="exam-clearance-content">
+                <div class="clearance-status">
+                    <div class="status-card library">
+                        <div class="status-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="status-info">
+                            <h3>Library Clearance</h3>
+                            <span class="status-badge cleared">Cleared</span>
+                            <p>Last updated: May 12, 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card accounts">
+                        <div class="status-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="status-info">
+                            <h3>Accounts Clearance</h3>
+                            <span class="status-badge pending">Pending</span>
+                            <p>৳ 2,500 due payment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card registrar">
+                        <div class="status-icon">
+                            <i class="fas fa-stamp"></i>
+                        </div>
+                        <div class="status-info">
+                            <h3>Registrar Clearance</h3>
+                            <span class="status-badge not-cleared">Not Cleared</span>
+                            <p>Complete other clearances first</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearance-instructions">
+                    <h3><i class="fas fa-info-circle"></i> Exam Clearance Instructions</h3>
+                    <ol>
+                        <li>Complete all library dues and return borrowed books</li>
+                        <li>Pay all outstanding tuition and other fees</li>
+                        <li>Submit required documents to the registrar office</li>
+                        <li>Clear all departmental requirements</li>
+                        <li>Print your exam clearance form once all sections show "Cleared" status</li>
+                    </ol>
+                </div>
+
+                <div class="exam-clearance-form">
+                    <h3><i class="fas fa-file-alt"></i> Exam Clearance Form</h3>
+                    <div class="form-actions">
+                        <button id="check-clearance" class="btn-primary">
+                            <i class="fas fa-sync"></i> Check Clearance Status
+                        </button>
+                        <button id="print-clearance" class="btn-secondary" disabled>
+                            <i class="fas fa-print"></i> Print Clearance Form
+                        </button>
+                    </div>
+                </div>
+
+                <div class="upcoming-exams">
+                    <h3><i class="fas fa-calendar-check"></i> Upcoming Exams</h3>
+                    <div class="exam-cards">
+                        <div class="exam-card">
+                            <div class="exam-date">
+                                <span class="day">25</span>
+                                <span class="month">May</span>
+                            </div>
+                            <div class="exam-info">
+                                <h4>SE 321 - Software Engineering Web Application</h4>
+                                <p>9:00 AM - 12:00 PM | Room: AB4 302</p>
+                                <span class="exam-status">Clearance Required</span>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-date">
+                                <span class="day">27</span>
+                                <span class="month">May</span>
+                            </div>
+                            <div class="exam-info">
+                                <h4>SE 333 - Artificial Intelligence</h4>
+                                <p>2:00 PM - 5:00 PM | Room: AB4 405</p>
+                                <span class="exam-status">Clearance Required</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/exam-clearance.js"></script>
+</body>
+</html>
