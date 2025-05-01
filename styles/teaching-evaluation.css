@@ -1,0 +1,251 @@
+/* Teaching Evaluation Specific Styles */
+.evaluation-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.evaluation-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.info-card i {
+    font-size: 20px;
+    color: var(--primary);
+    min-width: 30px;
+}
+
+.info-card p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.evaluation-status {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+}
+
+.evaluation-status h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-container span {
+    font-size: 13px;
+    color: var(--text-light);
+    align-self: flex-end;
+}
+
+.courses-to-evaluate {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+}
+
+.courses-to-evaluate h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-card {
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.course-card:last-child {
+    margin-bottom: 0;
+}
+
+.course-header {
+    padding: 15px 20px;
+    background-color: var(--primary-extra-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.course-header h4 {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.faculty-name {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.evaluation-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rating-item label {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.jq-ry-container {
+    padding: 0 !important;
+}
+
+.feedback-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feedback-item label {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.feedback-item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.feedback-item textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn-submit {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 15px;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+.completed-evaluations {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+}
+
+.completed-evaluations h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.completed-card .course-header {
+    background-color: #f0fdf4;
+}
+
+.evaluation-summary {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-item span {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.submission-date {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .evaluation-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .evaluation-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

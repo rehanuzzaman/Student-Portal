@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Mentor</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/mentor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payments.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li class="active"><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/avatar.png" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-hands-helping"></i> Mentor</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">Loading...</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="mentor-content">
+                <div class="mentor-profile">
+                    <div class="profile-header">
+                        <div class="mentor-avatar">
+                            <img src="./assets/mentor-avatar.png" alt="Mentor Avatar">
+                        </div>
+                        <div class="mentor-info">
+                            <h3>Dr. Imran Mahmud</h3>
+                            <p class="department">Department of Software Engineering</p>
+                            <div class="mentor-contacts">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>imran.mahmud@diu.edu.bd</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+880 1711-234567</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-door-open"></i>
+                                    <span>Room: AB4-502 (Mon-Wed-Fri, 2-4 PM)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <div class="detail-card">
+                            <h4><i class="fas fa-user-graduate"></i> Academic Background</h4>
+                            <ul>
+                                <li>PhD in Computer Science, University of Dhaka</li>
+                                <li>MSc in Software Engineering, BUET</li>
+                                <li>BSc in Computer Science, University of Dhaka</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card">
+                            <h4><i class="fas fa-briefcase"></i> Professional Experience</h4>
+                            <ul>
+                                <li>Professor, DIU (2018-Present)</li>
+                                <li>Senior Software Engineer, Samsung R&D (2012-2018)</li>
+                                <li>Research Fellow, BRAC University (2010-2012)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mentor-actions">
+                    <div class="action-card request-meeting">
+                        <h3><i class="fas fa-calendar-plus"></i> Request Meeting</h3>
+                        <form id="meeting-form">
+                            <div class="form-group">
+                                <label for="meeting-date">Date</label>
+                                <input type="date" id="meeting-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="meeting-time">Time</label>
+                                <input type="time" id="meeting-time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="meeting-purpose">Purpose</label>
+                                <select id="meeting-purpose" required>
+                                    <option value="">Select purpose</option>
+                                    <option value="academic">Academic Guidance</option>
+                                    <option value="course">Course Selection</option>
+                                    <option value="career">Career Advice</option>
+                                    <option value="personal">Personal Matter</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="meeting-details">Details</label>
+                                <textarea id="meeting-details" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Send Request
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="action-card upcoming-meetings">
+                        <h3><i class="fas fa-calendar-check"></i> Upcoming Meetings</h3>
+                        <div class="meeting-list">
+                            <div class="meeting-item">
+                                <div class="meeting-date">
+                                    <span class="day">20</span>
+                                    <span class="month">May</span>
+                                </div>
+                                <div class="meeting-info">
+                                    <h4>Course Selection Advice</h4>
+                                    <p><i class="fas fa-clock"></i> 3:00 PM - 3:30 PM</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> AB4-502</p>
+                                    <span class="meeting-status confirmed">Confirmed</span>
+                                </div>
+                            </div>
+
+                            <div class="meeting-item">
+                                <div class="meeting-date">
+                                    <span class="day">25</span>
+                                    <span class="month">May</span>
+                                </div>
+                                <div class="meeting-info">
+                                    <h4>Final Project Discussion</h4>
+                                    <p><i class="fas fa-clock"></i> 2:30 PM - 3:30 PM</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> AB4-502</p>
+                                    <span class="meeting-status pending">Pending Approval</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mentor-messages">
+                    <h3><i class="fas fa-comments"></i> Messages</h3>
+                    <div class="message-container">
+                        <div class="message-list">
+                            <div class="message-item mentor">
+                                <div class="message-avatar">
+                                    <img src="./assets/mentor-avatar.png" alt="Mentor Avatar">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="sender">Dr. Imran Mahmud</span>
+                                        <span class="time">May 15, 3:24 PM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        <p>Hello Rehanuz, I've reviewed your course selection for next semester. Let's discuss this in our meeting on the 20th.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="message-item student">
+                                <div class="message-avatar">
+                                    <img src="./assets/avatar.png" alt="Student Avatar">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="sender">You</span>
+                                        <span class="time">May 14, 2:15 PM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        <p>Dear Sir, I need advice about my final year project topic. Are you available next week?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message-input">
+                            <textarea placeholder="Type your message..."></textarea>
+                            <button class="btn-send">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/mentor.js"></script>
+</body>
+</html>
