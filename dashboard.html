@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Dashboard</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Blue Themed Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payment-ledger.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/student.jpg" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">May 15, 2025</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Summary Cards -->
+                <section class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-content">
+                            <h3>Current Semester</h3>
+                            <p class="value">Spring 2025</p>
+                            <p class="info">14 Weeks Completed</p>
+                        </div>
+                        <i class="fas fa-calendar" style="color: #1565c0;"></i>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="card-content">
+                            <h3>Registered Courses</h3>
+                            <p class="value">6 Courses</p>
+                            <p class="info">18 Credits</p>
+                        </div>
+                        <i class="fas fa-book" style="color: #1565c0;"></i>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="card-content">
+                            <h3>Current CGPA</h3>
+                            <p class="value">3.78</p>
+                            <p class="info">Dean's List</p>
+                        </div>
+                        <i class="fas fa-award" style="color: #1565c0;"></i>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="card-content">
+                            <h3>Attendance</h3>
+                            <p class="value">94%</p>
+                            <p class="info">42 Days Present</p>
+                        </div>
+                        <i class="fas fa-clipboard-check" style="color: #1565c0;"></i>
+                    </div>
+                </section>
+
+                <!-- Financial Overview -->
+                <section class="financial-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-wallet"></i> Financial Overview</h3>
+                        <a href="payment-ledger.html" class="view-all">View Details</a>
+                    </div>
+                    
+                    <div class="financial-cards">
+                        <div class="financial-card payable" style="background-color: #1565c0;">
+                            <h4>Total Payable</h4>
+                            <p class="amount">৳ 48,500</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%; background-color: #e3f2fd;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="financial-card paid" style="background-color: #1e88e5;">
+                            <h4>Total Paid</h4>
+                            <p class="amount">৳ 46,000</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%; background-color: #bbdefb;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="financial-card due" style="background-color: #0d47a1;">
+                            <h4>Total Due</h4>
+                            <p class="amount">৳ 2,500</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 5%; background-color: #90caf9;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts Section -->
+                <section class="charts-section">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4><i class="fas fa-chart-bar"></i> Semester Results</h4>
+                            <select id="result-filter" class="chart-filter">
+                                <option value="sgpa">SGPA</option>
+                                <option value="cgpa">CGPA</option>
+                            </select>
+                        </div>
+                        <canvas id="resultsChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4><i class="fas fa-money-bill-wave"></i> Payment History</h4>
+                            <select id="payment-filter" class="chart-filter">
+                                <option value="semester">By Semester</option>
+                                <option value="year">By Year</option>
+                            </select>
+                        </div>
+                        <canvas id="paymentsChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Quick Links & Notices -->
+                <section class="quick-section">
+                    <div class="quick-links">
+                        <h3><i class="fas fa-link"></i> Quick Links</h3>
+                        <div class="links-grid">
+                            <a href="registrations.html" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-edit"></i>
+                                <span>Course Registration</span>
+                            </a>
+                            <a href="exam-clearance.html" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Final Exam Form</span>
+                            </a>
+                            <a href="#" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-book-open"></i>
+                                <span>Digital Content</span>
+                            </a>
+                            <a href="class-schedule.html" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Class Routine</span>
+                            </a>
+                            <a href="teaching-evaluation.html" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Teaching Evaluation</span>
+                            </a>
+                            <a href="#" class="quick-link" style="background-color: #e3f2fd; color: #1565c0;">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Help Desk</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="notices">
+                        <div class="section-header">
+                            <h3><i class="fas fa-bullhorn"></i> Latest Notices</h3>
+                            <a href="notices.html" class="view-all">View All</a>
+                        </div>
+                        <div class="notice-list">
+                            <div class="notice-item">
+                                <div class="notice-badge important">Important</div>
+                                <div class="notice-content">
+                                    <h4>Final Exam Schedule Published</h4>
+                                    <p>Spring 2025 final exam schedule has been published. Check your routine immediately.</p>
+                                    <div class="notice-meta">
+                                        <span><i class="fas fa-calendar"></i> May 10, 2025</span>
+                                        <span><i class="fas fa-clock"></i> 5 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notice-item">
+                                <div class="notice-badge">General</div>
+                                <div class="notice-content">
+                                    <h4>Summer 2025 Registration Opens</h4>
+                                    <p>Registration for Summer 2025 semester will begin on June 1, 2025.</p>
+                                    <div class="notice-meta">
+                                        <span><i class="fas fa-calendar"></i> May 5, 2025</span>
+                                        <span><i class="fas fa-clock"></i> 10 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notice-item">
+                                <div class="notice-badge">Transport</div>
+                                <div class="notice-content">
+                                    <h4>Summer Transport Schedule</h4>
+                                    <p>Updated transport schedule for Summer 2025 has been published on the portal.</p>
+                                    <div class="notice-meta">
+                                        <span><i class="fas fa-calendar"></i> Apr 28, 2025</span>
+                                        <span><i class="fas fa-clock"></i> 2 weeks ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/dashboard.js"></script>
+</body>
+</html>
