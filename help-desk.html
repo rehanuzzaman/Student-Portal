@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Student Portal - Help Desk</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/help-desk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/diulogo_white.png" alt="DIU Logo" class="logo">
+                <h1>Student Portal</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="payments.html"><i class="fas fa-file-invoice-dollar"></i> Payments</a></li>
+                    <li><a href="registrations.html"><i class="fas fa-clipboard-list"></i> Registrations</a></li>
+                    <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+                    <li><a href="class-schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="exam-clearance.html"><i class="fas fa-graduation-cap"></i> Exam Clearance</a></li>
+                    <li><a href="teaching-evaluation.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Evaluation</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-hands-helping"></i> Mentor</a></li>
+                    <li><a href="transport.html"><i class="fas fa-bus"></i> Transport</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li class="active"><a href="help-desk.html"><i class="fas fa-question-circle"></i> Help Desk</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="./assets/avatar.png" alt="Student Avatar">
+                <div class="user-info">
+                    <span class="name">REHANUZ ZAMAN</span>
+                    <span class="id">222-35-1091</span>
+                </div>
+                <a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2><i class="fas fa-question-circle"></i> Help Desk</h2>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="current-date">Loading...</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="help-desk-content">
+                <div class="help-options">
+                    <div class="option-card" data-target="faq">
+                        <div class="option-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="option-info">
+                            <h3>FAQs</h3>
+                            <p>Find answers to common questions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="option-card" data-target="contact">
+                        <div class="option-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="option-info">
+                            <h3>Contact Support</h3>
+                            <p>Get in touch with our support team</p>
+                        </div>
+                    </div>
+                    
+                    <div class="option-card" data-target="ticket">
+                        <div class="option-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="option-info">
+                            <h3>Submit Ticket</h3>
+                            <p>Report an issue or request assistance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="option-card" data-target="status">
+                        <div class="option-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="option-info">
+                            <h3>Ticket Status</h3>
+                            <p>Check your existing support tickets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-section active" id="faq">
+                    <h3><i class="fas fa-book"></i> Frequently Asked Questions</h3>
+                    <div class="faq-container">
+                        <div class="faq-category">
+                            <h4>Account Issues</h4>
+                            <div class="faq-item">
+                                <button class="faq-question">How do I reset my password?</button>
+                                <div class="faq-answer">
+                                    <p>You can reset your password by clicking on "Forgot Password" on the login page. A reset link will be sent to your registered email address.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Why can't I access my account?</button>
+                                <div class="faq-answer">
+                                    <p>Account access issues can occur due to incorrect login attempts or unpaid fees. Contact support if the problem persists.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-category">
+                            <h4>Registration</h4>
+                            <div class="faq-item">
+                                <button class="faq-question">When does course registration open?</button>
+                                <div class="faq-answer">
+                                    <p>Registration typically opens 2 weeks before the semester starts. Check the academic calendar for exact dates.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">How do I drop a course?</button>
+                                <div class="faq-answer">
+                                    <p>Courses can be dropped through the Registration page before the add/drop deadline.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-section" id="contact">
+                    <h3><i class="fas fa-headset"></i> Contact Support</h3>
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Phone Support</h4>
+                                <p>+880 9612-939393</p>
+                                <p>Sunday-Thursday, 9AM-5PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Email Support</h4>
+                                <p>support@diu.edu.bd</p>
+                                <p>Typically responds within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>In-Person</h4>
+                                <p>Room 305, Admin Building</p>
+                                <p>DIU Main Campus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-section" id="ticket">
+                    <h3><i class="fas fa-ticket-alt"></i> Submit Support Ticket</h3>
+                    <form id="support-ticket-form">
+                        <div class="form-group">
+                            <label for="ticket-subject">Subject</label>
+                            <input type="text" id="ticket-subject" placeholder="Briefly describe your issue" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ticket-category">Category</label>
+                            <select id="ticket-category" required>
+                                <option value="">Select category</option>
+                                <option value="account">Account Issue</option>
+                                <option value="registration">Registration</option>
+                                <option value="payment">Payment</option>
+                                <option value="technical">Technical Problem</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ticket-details">Details</label>
+                            <textarea id="ticket-details" rows="5" placeholder="Describe your issue in detail..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ticket-attachment">Attachment (if any)</label>
+                            <input type="file" id="ticket-attachment">
+                            <small>Supported formats: PDF, JPG, PNG (Max 5MB)</small>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Submit Ticket
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="help-section" id="status">
+                    <h3><i class="fas fa-clipboard-list"></i> My Support Tickets</h3>
+                    <div class="ticket-list">
+                        <div class="ticket-item">
+                            <div class="ticket-header">
+                                <h4>Cannot access my course materials</h4>
+                                <span class="ticket-status processing">Processing</span>
+                            </div>
+                            <div class="ticket-body">
+                                <div class="ticket-meta">
+                                    <span><i class="fas fa-calendar"></i> Submitted: May 15, 2025</span>
+                                    <span><i class="fas fa-tag"></i> Category: Technical Problem</span>
+                                </div>
+                                <p class="ticket-desc">I'm unable to access the digital content for SE 321 course.</p>
+                                <div class="ticket-actions">
+                                    <button class="btn-view">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ticket-item">
+                            <div class="ticket-header">
+                                <h4>Payment receipt needed</h4>
+                                <span class="ticket-status resolved">Resolved</span>
+                            </div>
+                            <div class="ticket-body">
+                                <div class="ticket-meta">
+                                    <span><i class="fas fa-calendar"></i> Submitted: May 10, 2025</span>
+                                    <span><i class="fas fa-tag"></i> Category: Payment</span>
+                                </div>
+                                <p class="ticket-desc">Need official receipt for Spring 2025 tuition payment.</p>
+                                <div class="ticket-actions">
+                                    <button class="btn-view">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                    <button class="btn-download">
+                                        <i class="fas fa-download"></i> Download Solution
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./scripts/help-desk.js"></script>
+</body>
+</html>
